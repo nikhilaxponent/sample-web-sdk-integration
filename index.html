@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowBolt Web SDK - Integration Demo & Sandbox</title>
+  <!-- Import premium fonts: Inter for UI copy and JetBrains Mono for code snippets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Link external styles for the demo page. Note: CSS rules reside in styles.css -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <!-- Background decorative glowing orbs for premium dark glassmorphism look -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="app-layout">
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-bolt">⚡</span>
+        <span class="logo-text">GrowBolt<span class="logo-accent">SDK</span></span>
+      </div>
+      <span class="badge badge-success">Live Test Sandbox</span>
+    </header>
+
+    <main class="app-main">
+      <!-- Left Column: Interactive Demo Card -->
+      <section class="demo-card-section">
+        <div class="reward-card">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="category-tag">Integration Demo</span>
+            <h2>GrowBolt Web SDK</h2>
+            <p class="card-desc">Complete simple offers, play games, and take surveys to instantly unlock in-app rewards
+              and points.</p>
+          </div>
+
+          <div class="sdk-status-panel">
+            <div class="status-item">
+              <span class="status-label">SDK Script:</span>
+              <span class="status-value badge badge-success">Loaded</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Environment:</span>
+              <span class="status-value badge badge-purple">Production</span>
+            </div>
+          </div>
+
+          <!-- Trigger Button: This button will open the GrowBolt Offerwall when clicked -->
+          <button id="openRewards" class="btn-primary">
+            <span>Launch Offerwall</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="app-footer">
+      <p>GrowBolt Integration Sample Repo. Open for developer use.</p>
+      <a href="https://docs.growbolt.ai" target="_blank" rel="noopener noreferrer" class="footer-link">Documentation
+        &rarr;</a>
+    </footer>
+  </div>
+
+  <!-- 
+    ========================================================================
+    GrowBolt SDK Integration Scripts
+    ========================================================================
+  -->
+
+  <!-- 1. The official GrowBolt Web SDK client script (loads the global GrowBolt object) -->
+  <script src="https://sdk.growbolt.ai/sdk.js"></script>
+
+  <!-- 2. Application Logic: Handles SDK configuration, initialization, and click actions -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
